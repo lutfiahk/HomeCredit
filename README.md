@@ -32,9 +32,9 @@ Data yang digunakan merupakan data profil client, dimana pada project ini hanya 
 | NAME_FAMILY_STATUS  | Status keluarga                             |
 | CNT_FAM_MEMBERS     | Banyak anggota keluarga                     |
 <br>
-**Role** ‘model klasifikasi’ dalam project ini adalah melakukan prediksi client payment dengan memberikan :
-**Label 1** untuk client yang dianggap akan melakukan gagal bayar
-**Label  0** untuk client yang dianggap tidak akan melakukan gagal bayar
+<b>Role<\b> ‘model klasifikasi’ dalam project ini adalah melakukan prediksi client payment dengan memberikan :
+<b>Label 1<\b> untuk client yang dianggap akan melakukan gagal bayar
+<b>Label  0<\b> untuk client yang dianggap tidak akan melakukan gagal bayar
 
 ### Step by Step
 * Data Cleansing <br>
@@ -44,7 +44,7 @@ Dilakukan Cleansing data dari missing value, duplicated data, dan data yang tida
 Kemudian dilakukan data preprocessing dengan melakukan data splitting, outlier handling, feature encoding dan transformation, kemudian dilakukan imbalance class handling dengan SMOTE method.
 <br>
 * Data Modeling<br>
-Dilakukan modeling prediksi dengan beberapa algoritma, dimana diperoleh :
+Dilakukan modeling prediksi dengan beberapa algoritma, dimana diperoleh :<br>
 | Model                  | Accuracy and Recall Score                          |
 | ---------------------- | -------------------------------------------------- |
 | Logistic regression    | Accuracy (Test Set): 0.67, Recall (Test Set): 0.43 |
@@ -52,18 +52,19 @@ Dilakukan modeling prediksi dengan beberapa algoritma, dimana diperoleh :
 | XGBoost                | Accuracy (Test Set): 0.25, Recall (Test Set): 0.83 |
 | Random Forest          | Accuracy (Test Set): 0.61, Recall (Test Set): 0.46 |
 <br>
-Dari empat model yang digunakan, diketahui metode/model dengan nilai akurasi paling tinggi adalah model **Logistic Regression**. Tetapi selain dengan melihat nilai akurasinya, kami juga mengutamakan untuk mempertimbangkan nilai **recall**, karena tujuan utama dari model ini adalah berfokus untuk mengurangi false negative atau dalam kasus ini adalah client yang salah diprediksi tidak akan gagal bayar. Dan model dengan nilai recall tertinggi adalah XGBoost.
+Dari empat model yang digunakan, diketahui metode/model dengan nilai akurasi paling tinggi adalah model <b>Logistic Regression<\b>. Tetapi selain dengan melihat nilai akurasinya, kami juga mengutamakan untuk mempertimbangkan nilai <b>recall<\b>, karena tujuan utama dari model ini adalah berfokus untuk mengurangi false negative atau dalam kasus ini adalah client yang salah diprediksi tidak akan gagal bayar. Dan model dengan nilai recall tertinggi adalah XGBoost.
 <br>
-Tetapi untuk model XGBoost, nilai akurasi sangat buruk, yaitu hanya 24%, sehingga kami pertimbangkan akan lebih robust jika menggunakan **Logistic regression**.
+Tetapi untuk model XGBoost, nilai akurasi sangat buruk, yaitu hanya 24%, sehingga kami pertimbangkan akan lebih robust jika menggunakan <b>Logistic regression<\b>.
 <br>
 Untuk meningkatkan performa model, akan dilakukan hyperparameter tuning dengan parameter Regularization Parameter (C), dan penalty dengan 'L2'. <br>
-**Diperoleh hasil :**
-** Confusion Matrix
+<b>Diperoleh hasil :<\b><br>
+<b> Confusion Matrix<\b><br>
 |               | 0 (predicted) | 1 (predicted) |
 | ------------- | ------------- | ------------- |
 | 0 (actual)    | 45757         | 38935         |
 | 1 (actual)    | 2822          | 4652          |
- **Performance Score: **		 <br>
+
+<br><b>Performance Score:<\b>		 <br>
 Accuracy (Test Set): 0.55
 Recall (Test Set): 0.62
 roc_auc (train-proba): 0.63
