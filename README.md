@@ -13,7 +13,6 @@ Solution : <br>
 Dibuat suatu model yang dapat melakukan prediksi client payment secara otomatis yang dapat digunakan untuk mempermudah mengambil keputusan penerimaan pengajuan credit.<br>
 Model prediksi ini menggunakan Model Klasifikasi dengan algoritma Logistic Regression, Decision Tree, XGBoost, dan Random Forest yang kemudian akan dibandingkan untuk melihat model mana yang memiliki performa paling baik untuk melakukan prediksi.
 <br><br>
-Dataset yang digunakan dapat diakses di : https://drive.google.com/file/d/1qZa4C5KuaWC04UB7puVxMC5vyt5m4S5j/view?usp=sharing<br>
 <br>
 Data yang digunakan merupakan data profil client, dimana pada project ini hanya akan digunakan feature :
 | Column              | Description                                 |
