@@ -59,7 +59,7 @@ Data yang digunakan merupakan data profil client, dimana pada project ini hanya 
   <b>Diperoleh hasil :</b><br>
   <b> Confusion Matrix:</b><br>
 
-| Column     | 0 (predicted) | 0 (predicted) |
+| Column     | 0 (predicted) | 1 (predicted) |
 | ---------- | ------------- | ------------- |
 | 0 (actual) | 45757         | 38935         |
 | 1 (actual) | 2822          | 4652          |
